@@ -10,6 +10,10 @@ from time import sleep
 from urllib.parse import quote
 from sys import platform
 
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 options = Options()
 if platform == "win32":
 	options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
